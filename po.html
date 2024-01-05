@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Evolution</title>
+    <link rel="icon" href="/img/ModaEvolution_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&display=swap');
+    body {
+    font-family: 'Abhaya Libre', sans-serif;
+    }
+</style>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    teal: {
+
+                    },
+                },
+            },
+        },
+        darkMode: 'class',
+    }
+</script>
+<body>
+    <header class="mt-36">
+        <nav class="mx-auto flex justify-between items-center flex-wrap max-sm:grid max-sm:grid-cols-1 max-sm:grid-rows-auto max-sm:gap-4 bg-white p-4 sm:p-8 lg:px-10 dark:bg-gray-400 dark:text-black">
+            <a href="#" class="text-white text-xl font-semibold items-center flex justify-center">
+                <img class="w-48 md:w-52 " src="img/ModaEvolution_logo.png" alt="">
+            </a>
+            <ul id="menu-options" class="hidden space-x-6 sm:flex lg:space-x-20 text-start text-xl sm:text-base">
+                <br>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#productos" class="text-red-500 hover:text-red-700">Produtos</a></li>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#nosotros" class="text-red-500 hover:text-red-700">Nós</a></li>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#clientes" class="text-red-500 hover:text-red-700">Clientes</a></li>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#contacto" class="text-red-500 hover:text-red-700">Contato</a></li>
+                <div class="flex gap-5 justify-center">
+                    <div class="flex justify-center">
+                        <img src="img/moon.svg" alt="" class="moon cursor-pointer w-8" >
+                        <img src="img/sun.svg" alt="" class="sun cursor-pointer w-8" >
+                    </div>
+                    <select class="idiomas flex items-center dark:bg-gray-400" id="language-select" onchange="idiomas()">
+                        <option class="idiomas"value="es">Espanhol</option>
+                        <option class="idiomas"value="en">Inglês</option>
+                        <option class="idiomas"value="po" selected>Português</option>
+                    </select> 
+                </div> 
+            </ul>
+            
+            <div class="block sm:hidden relative items-center justify-center flex">
+                <button id="burger-icon" class="text-white focus:outline-none" aria-expanded="false">
+                    <i class="fas fa-bars text-black text-lg"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <img class="bg-cover bg-center bg-no-repeat relative" src="img/Imagen1.png">
+        </img>
+        </div>
+        
+        <div id="productos" class="mx-auto bg-white p-6 md:p-12 dark:bg-gray-800 dark:text-white">
+            <p class="text-center font-bold text-2xl lg:text-4xl mb-6 lg:mb-8">NOSSOS PRODUTOS</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Uniformes.png" alt="Uniformes" />
+                    <h2 class="font-bold text-center text-xl mt-4">Uniformes</h2>
+                    <p class="text-center text-sm md:text-base">
+                        Oferecemos uma ampla gama de uniformes profissionais e funcionais que combinam estilo e conforto.De uniformes corporativos a uniformes especializados para diferentes setores, garantimos a qualidade e o design que se adaptam às suas necessidades de trabalho.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Accesorios.png" alt="Accesorios" />
+                    <h3 class="font-bold text-center text-xl mt-4">Acessórios</h3>
+                    <p class="text-center text-sm md:text-base">
+                        Descubra nossa coleção de acessórios cuidadosamente selecionados que complementam seu estilo e destacam sua personalidade.De jóias elegantes a sacos práticos, nossos acessórios acrescentam esse toque distinto à sua aparência, fazendo a diferença em cada ocasião.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Textil.png" alt="Textil" />
+                    <h3 class="font-bold text-center text-xl mt-4">Têxtil</h3>
+                    <p class="text-center text-sm md:text-base">
+                        Nossa seção têxtil apresenta uma gama diversificada de tecidos e materiais de alta qualidade para roupas.De algodões suaves a tecidos técnicos duráveis, oferecemos opções versáteis para moda, decoração e mais projetos, garantindo qualidade e versatilidade.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Eco.png" alt="Ecologica" />
+                    <h3 class="font-bold text-center text-xl mt-4">Linha ecológica</h3>
+                    <p class="text-center text-sm md:text-base">
+                        Explore nossa linha ecológica comprometida com a sustentabilidade e o cuidado do meio ambiente.Aqui você encontrará produtos feitos de materiais reciclados, orgânicos e respeitosos com a natureza.Contribui para mudanças positivas optando por soluções amigáveis ​​com o planeta.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="nosotros" class="mx-auto bg-gray-200 p-6 md:p-12 dark:bg-gray-600 dark:text-white ">
+            <p class="text-center font-bold text-2xl lg:text-4xl mb-6 lg:mb-8">SOBRE NÓS</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-4">
+                <div class="w-full md:w-1/3 p-6 md:p-8 hover:scale-105 transition">
+                    <p class="text-black text-2xl lg:text-4xl text-right font-semibold dark:text-white">
+                        Moda da evolução: onde está a moda com seu estilo único.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 p-6 md:p-8 hover:scale-105 transition">
+                    <p class="text-center text-lg lg:text-xl">
+                        A Evolution Fashion é uma empresa dedicada à inovação em moda e estilo.Nós nos esforçamos para oferecer as últimas tendências e designs exclusivos que refletem a personalidade e a elegância de cada indivíduo.No coração de nossa abordagem está a idéia de que a moda é uma forma de arte que pode transformar vidas.Nós nos esforçamos para inspirar confiança e capacitar as pessoas através do que elas usam, criando coleções versáteis que se adaptam a vários estilos de vida e ocasiões.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 p-6 hover:scale-105 transition">
+                    <div>
+                        <p class="font-bold">Habilidades e foco:</p>
+                        <ul class="list-disc ml-6">
+                            <li>Design inovador e de vanguarda.</li>
+                            <li>Qualidade e durabilidade em cada produto.</li>
+                            <li>Compromisso com a sustentabilidade e a ética da moda.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="clientes" class="container mx-auto bg-white p-8 dark:bg-gray-800 ">
+            <p class="text-center font-bold  text-4xl d dark:text-white ">Nossos clientes nos apoiam</p> <br>
+            <div class="flex flex-wrap justify-center ">
+                <div class="w-96 bg-gray-200 hover:bg-white duration-300 rounded-lg p-8 mb-8 md:mb-0 md:mx-4 transform hover:scale-105 transition dark:bg-gray-800 dark:text-white dark:hover:bg-gray-800">
+                    <img class="mx-auto rounded-full w-48 hover:w-52 duration-300" src="img/foto1.jpg" alt="Foto 1"> <br>
+                    <h2 class="font-bold text-center text-xl">María Lionza</h2> <br>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores sunt ea quisquam. Porro, temporibus nihil!</p>
+                    <br>
+                    <div class="flex items-center justify-center">
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                    </div>
+                </div>
+                <div class="w-96 bg-gray-200 hover:bg-white duration-300 rounded-lg p-8 mb-8 md:mb-0 md:mx-4 transform hover:scale-105 transition dark:bg-gray-800 dark:text-white dark:hover:bg-gray-800">
+                    <img class="mx-auto rounded-full w-48 hover:w-52 duration-300" src="img/foto2.jpg" alt="Foto 2"> <br>
+                    <h3 class="font-bold text-center text-xl">Janett Mercedes</h3> <br>
+                    <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quaerat animi exercitationem inventore quod.</p>
+                    <br>
+                    <div class="flex items-center justify-center">
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                    </div>
+                </div>
+                <div class="w-96 bg-gray-200 hover:bg-white duration-300 rounded-lg p-8 mb-8 md:mb-0 md:mx-4 transform hover:scale-105 transition dark:bg-gray-800 dark:text-white dark:hover:bg-gray-800">
+                    <img class="mx-auto rounded-full w-48 hover:w-52 duration-300" src="img/foto3.jpg" alt="Foto 3"> <br>
+                    <h3 class="font-bold text-center text-xl">Andy Woody</h3> <br>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, asperiores voluptas sapiente modi.</p>
+                    <br>
+                    <div class="flex items-center justify-center">
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="contacto" class="mx-auto bg-gray-200 dark:bg-gray-600 p-6 md:p-12 ">
+            <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                <div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20s dark:bg-gray-800 ">
+                    <div class="max-w-md mx-auto ">
+                        <div>
+                            <h1 class="text-center font-bold  text-4xl p-8 dark:text-white">Contate-nos</h1>
+                        </div>
+                        <div class="grid gap-6 sm:grid-cols-2 ">
+                            <div class="relative z-0">
+                              <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:text-white" placeholder=" Digite seu nome " />
+                            </div>
+                            <div class="relative z-0">
+                              <input type="text" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:text-white" placeholder="Digite seu e-mail" />
+                            </div>
+                            <div class="relative z-0 col-span-2">
+                              <textarea name="message" rows="5" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:text-white" placeholder="Escreva sua mensagem "></textarea>
+                            </div>
+                            <button type="submit" class="mt-5 rounded-md bg-black px-10 py-2 text-white ">Enviar</button>
+                          </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container flex flex-col mx-auto bg-white dark:bg-gray-800 dark:text-white ">
+            <div class="w-full draggable">
+                <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+                    <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
+                        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main dark:bg-gray-800 ">
+                        <span>
+                            <i class="fa-solid fa-envelope-open fa-2xl" style="color: #ef4444;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Email</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Entre em contato conosco com o seguinte e-mail:</p>
+                        <a class="text-lg font-bold text-purple-blue-500" href = "mailto:ventas@modaevolution.pe">ventas@modaevolution.pe</a>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main dark:bg-gray-800">
+                        <span>
+                            <i class="fa-solid fa-phone-volume fa-2xl" style="color: #ef4444;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Teléfono</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Entre em contato conosco através do seguinte número:</p>
+                        <a class="text-lg font-bold text-purple-blue-500" href="tel:+51949429071">+51 949 429 071</a>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main dark:bg-gray-800">
+                        <span>
+                            <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #ef4444;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Adress</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Visitanos en:</p>
+                        <a class="text-lg font-bold text-purple-blue-500" target="_blank" href="https://maps.app.goo.gl/GjRNgeqiqVG7UTsQ8">Juan J Ganoza 227 California Distrito de Víctor Larco Herrera 13009 Perú</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white p-20">
+        <div class="mx-auto flex items-center flex-col p-6 md:p-12">
+            <p class="text-center font-bold text-2xl lg:text-4xl mb-6 lg:mb-8">SIGUENOS EN:</p>
+            <div class="flex p-4">
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-facebook rounded-full bg-white p-4"></i>
+                </a>
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-instagram rounded-full bg-white p-4"></i>
+                </a>
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-telegram rounded-full bg-white p-4"></i>
+                </a>
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-twitter rounded-full bg-white p-4"></i>
+                </a>
+            </div>
+            <p class="mt-8">&copy; 2023 Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+    
+    <div class="fixed right-2 bottom-8 p-2 scale-125">
+        <a href="https://api.whatsapp.com/send?phone=+51949429071&text=Hola" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg h-12 w-12 p-6 flex items-center justify-center">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+      
+    <script src="js/funciones.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Evolution</title>
+    <link rel="icon" href="img/ModaEvolution_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&display=swap');
+    body {
+    font-family: 'Abhaya Libre', sans-serif;
+    }
+</style>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    teal: {
+
+                    },
+                },
+            },
+        },
+        darkMode: 'class',
+    }
+</script>
+<body>
+    <header class="mt-36">
+        <nav class="mx-auto flex justify-between items-center flex-wrap max-sm:grid max-sm:grid-cols-1 max-sm:grid-rows-auto max-sm:gap-4 bg-white p-4 sm:p-8 lg:px-10 dark:bg-gray-400 dark:text-black">
+            <a href="#" class="text-white text-xl font-semibold items-center flex justify-center">
+                <img class="w-48 md:w-52 " src="img/ModaEvolution_logo.png" alt="">
+            </a>
+            <ul id="menu-options" class="hidden space-x-6 sm:flex lg:space-x-20 text-start text-xl sm:text-base">
+                <br>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#productos" class="text-red-500 hover:text-red-700">Products</a></li>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#nosotros" class="text-red-500 hover:text-red-700">About Us</a></li>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#clientes" class="text-red-500 hover:text-red-700">Customers</a></li>
+                <li class="sm:hover:bg-white hover:bg-gray-100 transition duration-300"><a href="#contacto" class="text-red-500 hover:text-red-700">Contact</a></li>
+                <div class="flex gap-5 justify-center">
+                    <div class="flex justify-center">
+                        <img src="img/moon.svg" alt="" class="moon cursor-pointer w-8" >
+                        <img src="img/sun.svg" alt="" class="sun cursor-pointer w-8" >
+                    </div>
+                    <select class="idiomas flex items-center dark:bg-gray-400" id="language-select" onchange="idiomas()">
+                        <option class="idiomas"value="es">Spanish</option>
+                        <option class="idiomas"value="en" selected>English</option>
+                        <option class="idiomas"value="po">Portuguese</option>
+                    </select> 
+                </div>
+                
+
+            </ul>
+            
+            <div class="block sm:hidden relative items-center justify-center flex">
+                <button id="burger-icon" class="text-white focus:outline-none" aria-expanded="false">
+                    <i class="fas fa-bars text-black text-lg"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <img class="bg-cover bg-center bg-no-repeat relative" src="img/Imagen1.png">
+        </img>
+        </div>
+        
+        <div id="productos" class="mx-auto bg-white p-6 md:p-12 dark:bg-gray-800 dark:text-white">
+            <p class="text-center font-bold text-2xl lg:text-4xl mb-6 lg:mb-8">OUR PRODUCTS</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Uniformes.png" alt="Uniformes" />
+                    <h2 class="font-bold text-center text-xl mt-4">Uniforms</h2>
+                    <p class="text-center text-sm md:text-base">
+                        We offer a wide range of professional and functional uniforms that combine style and comfort.From corporate uniforms to specialized uniforms for different sectors, we guarantee quality and design that adapts to your work needs.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Accesorios.png" alt="Accesorios" />
+                    <h3 class="font-bold text-center text-xl mt-4">Accessories</h3>
+                    <p class="text-center text-sm md:text-base">
+                        Discover our collection of carefully selected accessories that complement your style and highlight your personality.From elegant jewels to practical bags, our accessories add that distinctive touch to your appearance, making a difference on each occasion.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Textil.png" alt="Textil" />
+                    <h3 class="font-bold text-center text-xl mt-4">Textile</h3>
+                    <p class="text-center text-sm md:text-base">
+                        Our textile section presents a diverse range of high quality fabrics and materials for clothing.From soft cottons to durable technical fabrics, we offer versatile options for fashion, decoration and more projects, guaranteeing quality and versatility.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 bg-white rounded-lg p-6 md:p-8 hover:scale-105 transition dark:bg-gray-800 dark:text-white">
+                    <img class="mx-auto rounded-full w-24 md:w-48" src="img/Eco.png" alt="Ecologica" />
+                    <h3 class="font-bold text-center text-xl mt-4">Ecological line</h3>
+                    <p class="text-center text-sm md:text-base">
+                        Explore our ecological line committed to sustainability and care of the environment.Here you will find products made of recycled, organic and respectful materials with nature.It contributes to positive change opting for friendly solutions with the planet.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="nosotros" class="mx-auto bg-gray-200 p-6 md:p-12 dark:bg-gray-600 dark:text-white ">
+            <p class="text-center font-bold text-2xl lg:text-4xl mb-6 lg:mb-8">ABOUT US</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-4">
+                <div class="w-full md:w-1/3 p-6 md:p-8 hover:scale-105 transition">
+                    <p class="text-black text-2xl lg:text-4xl text-right font-semibold dark:text-white">
+                        Evolution Fashion: Where fashion is with your unique style.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 p-6 md:p-8 hover:scale-105 transition">
+                    <p class="text-center text-lg lg:text-xl">
+                        Evolution Fashion is a company dedicated to innovation in fashion and style.We strive to offer the latest trends and unique designs that reflect the personality and elegance of each individual.In the heart of our approach is the idea that fashion is an art form that can transform lives.We strive to inspire trust and empower people through what they use, creating versatile collections that adapt to various lifestyles and occasions.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/3 p-6 hover:scale-105 transition">
+                    <div>
+                        <p class="font-bold">Skills and focus:</p>
+                        <ul class="list-disc ml-6">
+                            <li>Innovative and avant -garde design.</li>
+                            <li>Quality and durability in each product.</li>
+                            <li>Commitment to sustainability and fashion ethics.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="clientes" class="container mx-auto bg-white p-8 dark:bg-gray-800 ">
+            <p class="text-center font-bold  text-4xl d dark:text-white ">Our clients support us</p> <br>
+            <div class="flex flex-wrap justify-center ">
+                <div class="w-96 bg-gray-200 hover:bg-white duration-300 rounded-lg p-8 mb-8 md:mb-0 md:mx-4 transform hover:scale-105 transition dark:bg-gray-800 dark:text-white dark:hover:bg-gray-800">
+                    <img class="mx-auto rounded-full w-48 hover:w-52 duration-300" src="img/foto1.jpg" alt="Foto 1"> <br>
+                    <h2 class="font-bold text-center text-xl">María Lionza</h2> <br>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores sunt ea quisquam. Porro, temporibus nihil!</p>
+                    <br>
+                    <div class="flex items-center justify-center">
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                    </div>
+                </div>
+                <div class="w-96 bg-gray-200 hover:bg-white duration-300 rounded-lg p-8 mb-8 md:mb-0 md:mx-4 transform hover:scale-105 transition dark:bg-gray-800 dark:text-white dark:hover:bg-gray-800">
+                    <img class="mx-auto rounded-full w-48 hover:w-52 duration-300" src="img/foto2.jpg" alt="Foto 2"> <br>
+                    <h3 class="font-bold text-center text-xl">Janett Mercedes</h3> <br>
+                    <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quaerat animi exercitationem inventore quod.</p>
+                    <br>
+                    <div class="flex items-center justify-center">
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                    </div>
+                </div>
+                <div class="w-96 bg-gray-200 hover:bg-white duration-300 rounded-lg p-8 mb-8 md:mb-0 md:mx-4 transform hover:scale-105 transition dark:bg-gray-800 dark:text-white dark:hover:bg-gray-800">
+                    <img class="mx-auto rounded-full w-48 hover:w-52 duration-300" src="img/foto3.jpg" alt="Foto 3"> <br>
+                    <h3 class="font-bold text-center text-xl">Andy Woody</h3> <br>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, asperiores voluptas sapiente modi.</p>
+                    <br>
+                    <div class="flex items-center justify-center">
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                        <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="contacto" class="mx-auto bg-gray-200 dark:bg-gray-600 p-6 md:p-12 ">
+            <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                <div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20s dark:bg-gray-800 ">
+                    <div class="max-w-md mx-auto ">
+                        <div>
+                            <h1 class="text-center font-bold  text-4xl p-8 dark:text-white">Contact us</h1>
+                        </div>
+                        <div class="grid gap-6 sm:grid-cols-2 ">
+                            <div class="relative z-0">
+                              <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:text-white" placeholder="Enter your name " />
+                            </div>
+                            <div class="relative z-0">
+                              <input type="text" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:text-white" placeholder="Enter your email" />
+                            </div>
+                            <div class="relative z-0 col-span-2">
+                              <textarea name="message" rows="5" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:text-white" placeholder="Write your message "></textarea>
+                            </div>
+                            <button type="submit" class="mt-5 rounded-md bg-black px-10 py-2 text-white ">To send</button>
+                          </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container flex flex-col mx-auto bg-white dark:bg-gray-800 dark:text-white ">
+            <div class="w-full draggable">
+                <div class="container flex flex-col items-center gap-16 mx-auto my-32">
+                    <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
+                        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main dark:bg-gray-800 ">
+                        <span>
+                            <i class="fa-solid fa-envelope-open fa-2xl" style="color: #ef4444;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Email</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Contact us to the following email:</p>
+                        <a class="text-lg font-bold text-purple-blue-500" href = "mailto:ventas@modaevolution.pe">ventas@modaevolution.pe</a>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main dark:bg-gray-800">
+                        <span>
+                            <i class="fa-solid fa-phone-volume fa-2xl" style="color: #ef4444;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Telfle</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Contact us through the following number:</p>
+                        <a class="text-lg font-bold text-purple-blue-500" href="tel:+516-486-5135">+51 949 429 071</a>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main dark:bg-gray-800">
+                        <span>
+                            <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #ef4444;"></i>
+                        </span>
+                        <p class="text-2xl font-extrabold text-dark-grey-900">Address</p>
+                        <p class="text-base leading-7 text-dark-grey-600">Visitanos en:</p>
+                        <a class="text-lg font-bold text-purple-blue-500" target="_blank" href="https://maps.app.goo.gl/GjRNgeqiqVG7UTsQ8">Juan J Ganoza 227 California Distrito de Víctor Larco Herrera 13009 Perú</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white p-20">
+        <div class="mx-auto flex items-center flex-col p-6 md:p-12">
+            <p class="text-center font-bold text-2xl lg:text-4xl mb-6 lg:mb-8">FOLLOW US ON:</p>
+            <div class="flex p-4">
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-facebook rounded-full bg-white p-4"></i>
+                </a>
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-instagram rounded-full bg-white p-4"></i>
+                </a>
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-telegram rounded-full bg-white p-4"></i>
+                </a>
+                <a href="#" class="text-black mx-2 hover:text-gray-500 p-4 sm:p-8">
+                    <i class="fab fa-twitter rounded-full bg-white p-4"></i>
+                </a>
+            </div>
+            <p class="mt-8">&copy; 2023 All rights reserved</p>
+        </div>
+        
+    </footer>
+    
+    <div class="fixed right-2 bottom-8 p-2 scale-125">
+        <a href="https://api.whatsapp.com/send?phone=+51949429071&text=Hola" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg h-12 w-12 p-6 flex items-center justify-center">
+            <i class="fab fa-whatsapp text-3xl"></i>
+        </a>
+    </div>
+
+    <script src="js/funciones.js"></script>
+
+</body>
+</html>
+
